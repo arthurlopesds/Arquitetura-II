@@ -1,0 +1,20 @@
+printf("%i %i ", [1], [2])
+LOOP:
+	MOV EAX, [1]
+	ADD EAX, [2]
+	MOV [1], [2]
+	MOV [2], EAX
+	printf("%i ", [2])
+	INC [3]
+	CMP [0], [3]
+	JG LOOP
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//														     //
+// Esse é o fibonacci que eu pensei, acho que tá errado, mas da pra ter mais ou menos uma ideia do que tem que fazer //
+// no código da cpu a partir desse assembly que fiz.                                                                 //
+// os printf são só pra saber que a gente vai ter que printar alguma coisa					     //
+//														     //
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
