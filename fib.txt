@@ -1,13 +1,17 @@
 printf("%i %i ", [1], [2])
-LOOP:
+REPETE:
 	MOV EAX, [1]
 	ADD EAX, [2]
-	MOV [1], [2]
+	MOV [4], EAX
+	MOV EAX, [2]
+	MOV [1], EAX
+	MOV EAX, [4]
 	MOV [2], EAX
 	printf("%i ", [2])
 	INC [3]
-	CMP [0], [3]
-	JG LOOP
+	MOV EAX, [0]
+	CMP EAX, [3]
+	JG REPETE
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -15,6 +19,11 @@ LOOP:
 // Esse é o fibonacci que eu pensei, acho que tá errado, mas da pra ter mais ou menos uma ideia do que tem que fazer //
 // no código da cpu a partir desse assembly que fiz.                                                                 //
 // os printf são só pra saber que a gente vai ter que printar alguma coisa					     //
+// [0] quantidade de números que será printado									     //
+// [1] primeiro valor do fibonacci										     //
+// [2] segundo valor do fibonacci										     //
+// [3] valor que vai ser incrementado pra saber se foi printado a quantidade certa				     //
+// [4] buffer para poder salvar o valor da soma já que só pode fazer operações com mem e mem			     //
 //														     //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
