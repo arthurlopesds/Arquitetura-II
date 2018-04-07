@@ -1,0 +1,4 @@
+MOV EAX,[5]
+MOV [4],EAX
+ADD EAX,[2]
+CMP EAX,[5]
