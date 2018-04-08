@@ -1,0 +1,14 @@
+PRINTF [2],[3]
+REPETE:
+	MOV EAX,[2]
+	ADD EAX,[3]
+	MOV [5],EAX
+	MOV EAX,[3]
+	MOV [2],EAX
+	MOV EAX,[5]
+	MOV [3],EAX
+    PRINTF [3]
+	INC [4]
+	MOV EAX,[1]
+	CMP EAX,[4]
+	JG REPETE
