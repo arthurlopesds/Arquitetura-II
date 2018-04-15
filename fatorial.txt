@@ -1,0 +1,9 @@
+MOV R1,[1]
+MOV R2,1
+REPETE:
+    DEC [1]
+    MUL R1,[1]
+    CMP R2,[1]
+    JL REPETE
+MOV [2],R1
+PRINTF [2]
