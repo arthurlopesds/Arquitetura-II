@@ -1,14 +1,12 @@
 PRINTF [2],[3]
 REPETE:
-	MOV EAX,[2]
-	ADD EAX,[3]
-	MOV [5],EAX
-	MOV EAX,[3]
-	MOV [2],EAX
-	MOV EAX,[5]
-	MOV [3],EAX
+	MOV R1,[2]
+	ADD R1,[3]
+	MOV R2,[3]
+	MOV [2],R2
+	MOV [3],R1
     PRINTF [3]
 	INC [4]
-	MOV EAX,[1]
-	CMP EAX,[4]
+	MOV R3,[1]
+	CMP R3,[4]
 	JG REPETE
